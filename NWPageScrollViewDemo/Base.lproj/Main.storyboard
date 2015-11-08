@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Q0-E7-3ez">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NWPageScrollViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-WT-vui" customClass="TopView" customModule="NWPageScrollViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="180"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Htg-d6-bhw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05J-JC-nQK" customClass="BotView" customModule="NWPageScrollViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="244" width="600" height="180"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.93333333333333335" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="05J-JC-nQK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="68x-6O-2lH"/>
+                            <constraint firstItem="05J-JC-nQK" firstAttribute="top" secondItem="z6p-WT-vui" secondAttribute="bottom" id="7Wx-86-pW1"/>
+                            <constraint firstAttribute="leading" secondItem="z6p-WT-vui" secondAttribute="leading" id="DqJ-Hz-xKA"/>
+                            <constraint firstItem="05J-JC-nQK" firstAttribute="height" secondItem="z6p-WT-vui" secondAttribute="height" id="LSO-AS-AQM"/>
+                            <constraint firstItem="z6p-WT-vui" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="268:600" id="SL7-ea-1dF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="05J-JC-nQK" secondAttribute="bottom" id="STQ-Sc-6l0"/>
+                            <constraint firstAttribute="trailing" secondItem="z6p-WT-vui" secondAttribute="trailing" id="SeQ-a7-PO1"/>
+                            <constraint firstItem="z6p-WT-vui" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U6N-w9-xts"/>
+                            <constraint firstAttribute="trailing" secondItem="05J-JC-nQK" secondAttribute="trailing" id="fif-LM-qli"/>
+                            <constraint firstItem="z6p-WT-vui" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wyC-rl-2ZD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SL7-ea-1dF"/>
+                                <exclude reference="STQ-Sc-6l0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="OUL-Io-lut"/>
+                    <connections>
+                        <outlet property="botView" destination="05J-JC-nQK" id="d91-iT-hZ1"/>
+                        <outlet property="topView" destination="z6p-WT-vui" id="siK-sy-wYM"/>
+                        <outlet property="topViewHeightConstraint" destination="Htg-d6-bhw" id="5xr-Xd-zXH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173" y="346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M1c-qB-TEs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Q0-E7-3ez" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zfk-jo-jvt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="d5t-gF-gUv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Pa-wA-a3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="346"/>
+        </scene>
+    </scenes>
+</document>

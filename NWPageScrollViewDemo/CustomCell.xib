@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9EW-TC-ZXx" customClass="CustomCellView" customModule="NWPageScrollViewDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQw-u1-ogj">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kZ-Ou-tx6">
+                            <rect key="frame" x="16" y="13.5" width="37.5" height="18"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.63137254899999995" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="9kZ-Ou-tx6" firstAttribute="centerY" secondItem="LQw-u1-ogj" secondAttribute="centerY" id="7I3-Pk-6Kf"/>
+                        <constraint firstAttribute="height" constant="45" id="HFk-fS-nX2"/>
+                        <constraint firstItem="9kZ-Ou-tx6" firstAttribute="leading" secondItem="LQw-u1-ogj" secondAttribute="leading" constant="16" id="xVk-HE-at6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LQw-u1-ogj" secondAttribute="trailing" id="J5C-ua-eR8"/>
+                <constraint firstItem="LQw-u1-ogj" firstAttribute="top" secondItem="9EW-TC-ZXx" secondAttribute="top" id="TIz-PA-rLP"/>
+                <constraint firstItem="LQw-u1-ogj" firstAttribute="leading" secondItem="9EW-TC-ZXx" secondAttribute="leading" id="VDP-PZ-q08"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="9kZ-Ou-tx6" id="neL-ad-kQn"/>
+            </connections>
+            <point key="canvasLocation" x="374" y="-127"/>
+        </view>
+    </objects>
+</document>
