@@ -83,8 +83,10 @@ class NWPageScrollView: UIScrollView, UIScrollViewDelegate {
             allCells.append(cell)
         }
         
-        let scrollViewSizeWidth: CGFloat = startX - self.padding + (self.frame.width - self.cellSize.width) * 0.5
-        
+        var scrollViewSizeWidth: CGFloat = startX - self.padding + (self.frame.width - self.cellSize.width) * 0.5
+        if cellSize.width >= self.containerSize.width {
+            scrollViewSizeWidth = startX
+        }
         self.contentSize = CGSizeMake(scrollViewSizeWidth, self.cellSize.height )
         self.scrollToIndex(stopAtIndex, animateScroll: false)
     }
